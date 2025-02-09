@@ -1,0 +1,16 @@
+extends layouts/layout
+
+block content
+    h1.govuk-heading-l Returned User Details
+
+    h2.govuk-heading-m User Details
+
+    dl.govuk-summary-list
+        +summary_row('ID', params.sub)
+        +summary_row('Email', params.email)
+        +summary_row('Email Verified', params.email_verified)
+        +summary_row('Phone', params.phone_number)
+        +summary_row('Phone Verified', params.phone_number_verified)
+
+    pre(style={'white-space': 'pre-wrap'})
+        =JSON.stringify(params)

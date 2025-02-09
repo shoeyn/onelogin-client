@@ -1,0 +1,6 @@
+package-lock.json
+dist/
+.idea/
+node_modules/
+public/stylesheets/*
+!public/stylesheets/.keep

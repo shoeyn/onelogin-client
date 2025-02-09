@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block content
+    div.govuk-grid-row
+        div.govuk-grid-column-two-thirds
+            div.govuk-panel.govuk-panel--confirmation.panel-grey
+                h1.govuk-panel__title An error has occurred
+
+            if msg
+                p#technical_error.govuk-body= msg
+            else
+                p#technical_error.govuk-body Sorry, there has been a problem processing your request
+
+            a.govuk-button(href="/") Try again

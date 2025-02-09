@@ -1,0 +1,122 @@
+// https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md
+$govuk-assets-path: 'dvla-external-frontend/dist/media/govuk/';
+@import "govuk-frontend/dist/govuk/index";
+
+@font-face {
+  font-family: "GDS Transport";
+  font-style: normal;
+  font-weight: normal;
+  font-weight: normal;
+  src: url("/fonts/light-94a07e06a1-v2.woff2") format("woff2"),url("/fonts/light-f591b13f7d-v2.woff") format("woff");
+  font-display: fallback
+}
+
+@font-face {
+  font-family: "GDS Transport";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/bold-b542beb274-v2.woff2") format("woff2"),url("/fonts/bold-affa96571d-v2.woff") format("woff");
+  font-display: fallback
+}
+
+.payment-total {
+  background: #f3f2f1;
+  padding: 20px;
+  border: 5px solid #dee0e2;
+}
+
+.validation-box {
+  text-align: center;
+  background: #f3f2f1;
+  padding: 70px 10px 30px 10px;
+  margin-bottom: 20px;
+}
+
+.payment-items {
+  margin-bottom: 1em;
+}
+
+.payment-cost {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.consent-panel {
+  background: #f3f2f1;
+  padding: 20px;
+  margin-top: 50px;
+  border: 2px solid #dee0e2;
+}
+
+.panel-grey {
+  color: #0b0c0c;
+  background-color: #f3f2f1;
+}
+
+.panel-title-no-subsequent-body {
+  margin-bottom: 0;
+}
+
+.autocomplete__wrapper {
+  li {
+    font-family: 'nta', Arial, sans-serif;
+  }
+}
+
+.th {
+  font-weight: normal;
+}
+
+.td {
+  font-weight: bold;
+}
+
+//Used to set the height on an iframe as per screen width: e.g - mobile, tablet, desktop
+.frame {
+  height: 570px !important;
+}
+
+@media (min-width: 1px) and (max-width: 320px) {
+  .frame {
+    height: 550px !important;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 360px) {
+  .frame {
+    height: 510px !important;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 824px) {
+  .frame {
+    height: 490px !important;
+  }
+}
+
+@media (min-width: 825px) and (max-width: 1200px) {
+  .frame {
+    height: 570px !important;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 2560px) {
+  .frame {
+    height: 580px !important;
+  }
+}
+
+.govuk-panel--warning {
+  color: govuk-colour('black');
+  background: govuk-colour('light-grey', $legacy: 'turquoise');
+
+  @include govuk-media-query($media-type: print) {
+    border-color: currentColor;
+    color: $govuk-print-text-colour;
+    background: none;
+  }
+}
+
+.govuk-focus-link:focus {
+  @include govuk-focused-text;
+}
